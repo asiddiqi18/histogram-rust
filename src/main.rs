@@ -3,7 +3,7 @@ use histogram::{HistogramInt, Args};
 
 fn main() {
     let args = Args::parse();
-    let histo = histogram::get_histogram(&args).unwrap_or_else(|err| {
+    let histo = HistogramInt::new(&args).unwrap_or_else(|err| {
         eprintln!("Application error: {}", err);
         std::process::exit(-1)
     });
