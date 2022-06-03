@@ -1,5 +1,5 @@
 use clap::Parser;
-use histogram::Args;
+use histogram::{HistogramInt, Args};
 
 fn main() {
     let args = Args::parse();
